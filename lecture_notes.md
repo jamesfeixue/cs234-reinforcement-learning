@@ -23,6 +23,36 @@ imitatition learning:
 seq learning under uncertainty
 - maximizing **expected** future reward
 
+assumptions
+1. state is just a function of the history (action, observation, reward), but this might omit certain information
+2. agent might not have access to world state, but it has its own state space
+3. markov assumption: agent's state info is a sufficent statistic of history
+4. assume you can make the system markov by including enough history
+
+- **full observability** / mdp : world state = observation
+- **partial observatbility** / POMDP : uses prior beliefs to aggregate / cluster info and make decisions
+- **bandits**: actions have no influence of next observations, no delayed rewards
+- mdp, pomdp: actions affect future observations
+- finite vs infinite horizon vs indefinite horizon
+
+agents
+- model-based agents - explicit model butt may or may not have policy or value function
+- model free: explicit value function and policy function
+fundamental differences in model based/free approaches by MSR
+
+how the world changes: deterministic, stochastic (representing hard to model processes)
+
+components
+1. **model**: next state given statet and action; prediction of immediate reward
+2. **policy**: mapping from state to action (can be deterministic or stochastic)
+3. **value**: expected discounted sum of future rewards under particular policy
+
+reward function:
+r(s), r(s, a), r(s, a, s')
+
+evaluation and control:
+- evaluation: est & pred expected rewards from given policy
+- control: find the best policy
 
 
 
